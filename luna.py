@@ -50,20 +50,20 @@ async def type_and_send(message):
     await message._client.send_chat_action(chat_id, "cancel")
 
 
-@luna.on_message(filters.command("repo") & ~filters.edited)
+@luna.on_message(filters.command("islamm") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://github.com/thehamkercat/LunaChatBot)"
-        + " | [Group](t.me/PatheticProgrammers)",
+        "[BORZ](https://t.me/isIam07)"
+        + " | [Group](t.me/isIam07)",
         disable_web_page_preview=True,
     )
 
 
-@luna.on_message(filters.command("help") & ~filters.edited)
+@luna.on_message(filters.command("islammm") & ~filters.edited)
 async def start(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
-    await message.reply_text("/repo - Get Repo Link")
+    await message.reply_text("/isl - Get Repo Link")
 
 
 @luna.on_message(
@@ -92,7 +92,7 @@ async def chat(_, message):
 
 
 @luna.on_message(
-    filters.private & ~filters.command("help") & ~filters.edited
+    filters.private & ~filters.command("islamm") & ~filters.edited
 )
 async def chatpm(_, message):
     if not message.text:
